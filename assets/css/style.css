@@ -1,9 +1,10 @@
 :root {
   --brand-color: #ff6d7a;
   --button-color: #83ba09;
-  --dark-color: #164E63;
-  --mid-color: #E5E7EB;
-  --light-color: #F8FAFC;
+  --dark-color: #164e63;
+  --logo-color: #ca0517;
+  --mid-color: #e5e7eb;
+  --light-color: #f8fafc;
 }
 
 .fontHeading, .banner .bannerHeading {
@@ -14,25 +15,34 @@
   font-weight: bold;
 }
 .navbar .navbar-brand {
-  font-family: "Twinkle Star", cursive;
-  color: var(--brand-color);
+  font-family: "Times New Roman", cursive;
+  font-style: italic;
+  color: var(--logo-color);
+  background: url(../img/logo.jpg) no-repeat 100% 100%/contain;
+  padding-right: 54px;
+  font-size: 1.2rem;
 }
 
 body {
   font-family: "Signika Negative", sans-serif;
+}
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 0.9rem;
+  }
 }
 
 .banner .bannerItem {
   height: 350px;
 }
 .banner .bannerItem.banner1 {
-  background: var(--brand-color) url("../img/background-1.jpg") 50% 30%/cover no-repeat;
+  background: #f4f4f8 url("../img/background-1.jpg") 50% 30%/cover no-repeat;
 }
 .banner .bannerItem.banner2 {
-  background: var(--brand-color) url("../img/background-2.jpg") 50% 30%/cover no-repeat;
+  background: #f4f4f8 url("../img/background-2.jpg") 50% 30%/cover no-repeat;
 }
 .banner .bannerItem.banner3 {
-  background: var(--brand-color) url("../img/background-3.jpg") 50% 30%/cover no-repeat;
+  background: #f4f4f8 url("../img/background-3.jpg") 50% 30%/cover no-repeat;
 }
 .banner .bannerContent {
   position: relative;
@@ -58,6 +68,17 @@ body {
   font-size: 3rem;
   color: var(--brand-color);
 }
+@media only screen and (max-width: 767px) {
+  .banner .bannerItem {
+    height: 250px;
+  }
+  .banner .bannerHeading {
+    font-size: 1.5rem;
+  }
+  .banner .bannerSubHeading {
+    font-size: 0.9rem;
+  }
+}
 
 /*----------------------------*\
 	section
@@ -65,6 +86,11 @@ body {
 .section {
   position: relative;
   padding: 4.5rem 0;
+}
+@media only screen and (max-width: 767px) {
+  .section {
+    padding: 1rem 0;
+  }
 }
 
 .section-bg {
@@ -96,8 +122,7 @@ body {
 }
 .section-title .sub-title {
   color: #23262a;
-  font-size: 21px;
-  line-height: 26px;
+  font-size: 1.1rem;
 }
 
 .primary-button {
@@ -105,7 +130,7 @@ body {
   display: inline-block;
   padding: 0px 30px;
   background: var(--button-color);
-  color: #FFF;
+  color: #fff;
   font-weight: 400;
   height: 45px;
   line-height: 45px;
@@ -118,6 +143,14 @@ body {
 }
 .primary-button.seconday-button {
   background: var(--brand-color);
+}
+@media only screen and (max-width: 767px) {
+  .primary-button {
+    padding: 10px;
+    height: auto;
+    line-height: normal;
+    font-size: 0.8rem;
+  }
 }
 
 .primary-button:after {
@@ -132,12 +165,14 @@ body {
   transition: 0.6s all;
 }
 
-.primary-button:hover, .primary-button:focus {
-  color: #FFF;
+.primary-button:hover,
+.primary-button:focus {
+  color: #fff;
   opacity: 1;
 }
 
-.primary-button:hover:after, .primary-button:focus:after {
+.primary-button:hover:after,
+.primary-button:focus:after {
   transform: scale3d(6, 2, 1) rotate(135deg) translate(0, 100%);
 }
 
@@ -196,8 +231,8 @@ body {
 }
 
 /*=========================================================
-    NUMBERS
-===========================================================*/
+      NUMBERS
+  ===========================================================*/
 .number {
   text-align: center;
   padding: 30px;
@@ -228,24 +263,25 @@ body {
 }
 
 /*=========================================================
-    CALL TO ACTION
-===========================================================*/
+      CALL TO ACTION
+  ===========================================================*/
 #cta.section {
-  padding: 90px 0px;
+  padding: 2rem 0px;
 }
 
 .cta-content .cta-heading {
-  color: #FFF;
+  color: #fff;
   font-size: 2rem;
 }
 
 .cta-content p.lead {
-  color: #FFF;
+  color: #fff;
+  font-size: 1rem;
 }
 
 /*=========================================================
-    TESTIMONIAL
-===========================================================*/
+      TESTIMONIAL
+  ===========================================================*/
 .testimonial {
   padding: 15px;
 }
@@ -289,7 +325,7 @@ body {
   font-size: 15px;
   border-radius: 10px;
   border-left: 0px;
-  background: #FFF;
+  background: #fff;
   margin: 0px 0px;
 }
 
@@ -298,10 +334,10 @@ body {
 }
 
 /*=========================================================
-    CAUSES
-===========================================================*/
+      CAUSES
+  ===========================================================*/
 .causes {
-  margin-bottom: 60px;
+  margin-bottom: 1rem;
 }
 
 .causes .causes-img {
@@ -358,7 +394,7 @@ body {
   transform: translate(50%, -100%);
   padding: 2px 10px;
   background: var(--button-color);
-  color: #FFF;
+  color: #fff;
   font-weight: 400;
   border-radius: 10px;
   font-size: 12px;
@@ -385,6 +421,7 @@ body {
 
 .causes .causes-content p {
   color: #607d8b;
+  margin: 0;
 }
 
 .causes .causes-content h3 {
@@ -414,8 +451,124 @@ body {
 }
 
 /*=========================================================
-    EVENTS
-===========================================================*/
+      ACTIVITIES
+  ===========================================================*/
+.activities {
+  background-color: #f4f4f8;
+}
+
+.activity .activity-img {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.activity .activity-img a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--button-color);
+  opacity: 0;
+  transition: 0.3s opacity;
+}
+
+.activity .activity-img a:hover:after {
+  opacity: 0.6;
+}
+
+.activity .activity-img img {
+  width: 100%;
+}
+
+.activity .activity-progress {
+  margin-top: 45px;
+}
+
+.activity-progress .activity-progress-bar {
+  position: relative;
+  height: 6px;
+  background-color: #e6e6ea;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.activity-progress .activity-progress-bar > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--button-color);
+  bottom: 0;
+  border-radius: 10px;
+}
+
+.activity-progress .activity-progress-bar > div span {
+  position: absolute;
+  right: 5px;
+  top: -3px;
+  transform: translate(50%, -100%);
+  padding: 2px 10px;
+  background: var(--button-color);
+  color: #fff;
+  font-weight: 400;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.activity-progress .activity-progress-bar > div span:after {
+  content: "";
+  position: absolute;
+  background-color: var(--button-color);
+  height: 3px;
+  bottom: 0;
+  transform: translate(-50%, 100%);
+  width: 3px;
+  left: 50%;
+}
+
+.activity-progress .activity-goal {
+  float: right;
+}
+
+.activity .activity-content {
+  margin-top: 5px;
+}
+
+.activity .activity-content p {
+  color: #607d8b;
+}
+
+.activity .activity-content h3 {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.activity .activity-content h3 > a {
+  font-weight: 700;
+  color: #23262a;
+  text-decoration: none;
+}
+
+.activity .activity-content .activity-donate {
+  margin-top: 15px;
+}
+
+.activity-details .activity-progress {
+  width: 75%;
+  float: left;
+  margin-top: 45px;
+}
+
+.activity-details .activity-donate {
+  float: right;
+  margin-top: 30px;
+}
+
+/*=========================================================
+      EVENTS
+  ===========================================================*/
 .event {
   margin-bottom: 60px;
 }
@@ -499,8 +652,8 @@ body {
 }
 
 /*=========================================================
-    BLOG
-===========================================================*/
+      BLOG
+  ===========================================================*/
 .article {
   margin-bottom: 60px;
 }
@@ -559,8 +712,8 @@ body {
 }
 
 /*----------------------------*\
-    tags & share
-\*----------------------------*/
+      tags & share
+  \*----------------------------*/
 .article-tags-share {
   margin-top: 30px;
 }
@@ -605,8 +758,8 @@ body {
 }
 
 /*----------------------------*\
-    comments
-\*----------------------------*/
+      comments
+  \*----------------------------*/
 .article-comments {
   margin-top: 60px;
 }
@@ -655,8 +808,8 @@ body {
 }
 
 /*----------------------------*\
-    reply form
-\*----------------------------*/
+      reply form
+  \*----------------------------*/
 .article-reply {
   margin-top: 60px;
 }
@@ -670,8 +823,8 @@ body {
 }
 
 /*----------------------------*\
-    pagination
-\*----------------------------*/
+      pagination
+  \*----------------------------*/
 .article-pagination {
   margin-bottom: 60px;
 }
@@ -689,7 +842,7 @@ body {
   border-radius: 50%;
   color: #5f646b;
   text-align: center;
-  background-color: #FFF;
+  background-color: #fff;
   border: 1px solid #e6e6ea;
   transition: 0.3s border-color;
 }
@@ -706,7 +859,7 @@ body {
   border-radius: 50%;
   color: #5f646b;
   text-align: center;
-  background-color: #FFF;
+  background-color: #fff;
   border: 1px solid var(--button-color);
 }
 
@@ -715,8 +868,8 @@ body {
 }
 
 /*=========================================================
-    ASIDE
-===========================================================*/
+      ASIDE
+  ===========================================================*/
 .widget + .widget {
   margin-top: 60px;
 }
@@ -727,8 +880,8 @@ body {
 }
 
 /*----------------------------*\
-    category
-\*----------------------------*/
+      category
+  \*----------------------------*/
 .widget-category ul li + li {
   margin-top: 15px;
 }
@@ -739,8 +892,8 @@ body {
 }
 
 /*----------------------------*\
-    posts
-\*----------------------------*/
+      posts
+  \*----------------------------*/
 .widget-post + .widget-post {
   margin-top: 30px;
 }
@@ -795,8 +948,8 @@ body {
 }
 
 /*----------------------------*\
-    causes
-\*----------------------------*/
+      causes
+  \*----------------------------*/
 .widget-causes + .widget-causes {
   margin-top: 30px;
 }
@@ -846,13 +999,14 @@ body {
   margin-top: 15px;
 }
 
-.widget-causes .causes-raised, .widget-causes .causes-goal {
+.widget-causes .causes-raised,
+.widget-causes .causes-goal {
   font-size: 12px;
 }
 
 /*=========================================================
-    FOOTER
-===========================================================*/
+      FOOTER
+  ===========================================================*/
 #footer {
   background-color: #f4f4f8;
 }
@@ -872,8 +1026,8 @@ body {
 }
 
 /*----------------------------*\
-    logo
-\*----------------------------*/
+      logo
+  \*----------------------------*/
 .footer-logo {
   margin-bottom: 30px;
 }
@@ -887,8 +1041,8 @@ body {
 }
 
 /*----------------------------*\
-    contact
-\*----------------------------*/
+      contact
+  \*----------------------------*/
 .footer-contact {
   margin-top: 30px;
 }
@@ -902,8 +1056,8 @@ body {
 }
 
 /*----------------------------*\
-    galery
-\*----------------------------*/
+      galery
+  \*----------------------------*/
 .footer-galery {
   margin: 0px -5px;
 }
@@ -943,8 +1097,8 @@ body {
 }
 
 /*----------------------------*\
-    newsletter
-\*----------------------------*/
+      newsletter
+  \*----------------------------*/
 .footer-newsletter {
   margin: 30px 0px;
 }
@@ -956,8 +1110,8 @@ body {
 }
 
 /*----------------------------*\
-    social
-\*----------------------------*/
+      social
+  \*----------------------------*/
 .footer-social li {
   display: inline-block;
   margin-right: 10px;
@@ -971,18 +1125,19 @@ body {
   border-radius: 50%;
   color: #5f646b;
   text-align: center;
-  background-color: #FFF;
+  background-color: #fff;
   border: 1px solid #e6e6ea;
   transition: 0.3s border-color;
 }
 
-.footer-social li a:hover, .footer-social li a:focus {
+.footer-social li a:hover,
+.footer-social li a:focus {
   border-color: var(--button-color);
 }
 
 /*----------------------------*\
-    copyright & footer nav
-\*----------------------------*/
+      copyright & footer nav
+  \*----------------------------*/
 #footer-bottom {
   border-top: 1px solid #e6e6ea;
   padding-top: 20px;
@@ -1001,25 +1156,29 @@ body {
   color: #5f646b;
 }
 
-#footer-bottom .footer-nav li a:hover, #footer-bottom .footer-nav li a:focus {
+#footer-bottom .footer-nav li a:hover,
+#footer-bottom .footer-nav li a:focus {
   color: var(--button-color);
 }
 
 /*=========================================================
-    RESPONSIVE
-===========================================================*/
+      RESPONSIVE
+  ===========================================================*/
 @media only screen and (max-width: 991px) {
   .section-title .title {
-    font-size: 33px;
+    font-size: 1.5rem;
   }
   .home-content h1 {
-    font-size: 43px;
+    font-size: 1.5rem;
   }
   .welcome-video {
     margin-top: 30px;
   }
-  .cta-content h1 {
-    font-size: 43px;
+  .cta-content .cta-heading {
+    font-size: 1.5rem;
+  }
+  .cta-content .lead {
+    font-size: 0.8rem;
   }
   #footer-bottom .footer-nav {
     text-align: left;
@@ -1033,7 +1192,8 @@ body {
   .causes-details .causes-donate {
     float: none;
   }
-  .article-tags-share .tags, .article-tags-share .share {
+  .article-tags-share .tags,
+.article-tags-share .share {
     display: block;
     float: none;
     width: 100%;

@@ -3,6 +3,7 @@
   // --brand-color: #FDA4AF;
   --button-color: #83ba09;
   --dark-color: #164e63;
+  --logo-color: #ca0517;
   --mid-color: #e5e7eb;
   --light-color: #f8fafc;
 }
@@ -11,28 +12,36 @@
 }
 .navbar {
   .navbar-brand {
-    font-family: "Twinkle Star", cursive;
-    color: var(--brand-color);
+    // font-family: "Twinkle Star", cursive;
+    font-family: "Times New Roman", cursive;
+    font-style: italic;
+    color: var(--logo-color);
+    background: url(../img/logo.jpg) no-repeat 100% 100%/contain;
+    padding-right: 54px;
+    font-size: 1.2rem;
   }
   font-weight: bold;
 }
 body {
   font-family: "Signika Negative", sans-serif;
+  @media only screen and (max-width: 767px) {
+    font-size: 0.9rem;
+  }
 }
 .banner {
   .bannerItem {
     height: 350px;
 
     &.banner1 {
-      background: var(--brand-color) url("../img/background-1.jpg") 50% 30% /
+      background: #f4f4f8 url("../img/background-1.jpg") 50% 30% /
         cover no-repeat;
     }
     &.banner2 {
-      background: var(--brand-color) url("../img/background-2.jpg") 50% 30% /
+      background: #f4f4f8 url("../img/background-2.jpg") 50% 30% /
         cover no-repeat;
     }
     &.banner3 {
-      background: var(--brand-color) url("../img/background-3.jpg") 50% 30% /
+      background: #f4f4f8 url("../img/background-3.jpg") 50% 30% /
         cover no-repeat;
     }
   }
@@ -62,6 +71,18 @@ body {
     font-size: 3rem;
     color: var(--brand-color);
   }
+
+  @media only screen and (max-width: 767px) {
+    .bannerItem {
+      height: 250px;
+    }
+    .bannerHeading {
+      font-size: 1.5rem;
+    }
+    .bannerSubHeading {
+      font-size: 0.9rem;
+    }
+  }
 }
 
 /*----------------------------*\
@@ -71,6 +92,9 @@ body {
 .section {
   position: relative;
   padding: 4.5rem 0;
+  @media only screen and (max-width: 767px) {
+    padding: 1rem 0;
+  }
 }
 
 .section-bg {
@@ -105,8 +129,7 @@ body {
 
   .sub-title {
     color: #23262a;
-    font-size: 21px;
-    line-height: 26px;
+    font-size: 1.1rem;
   }
 }
 
@@ -128,6 +151,13 @@ body {
   text-decoration: none;
   &.seconday-button {
     background: var(--brand-color);
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 10px;
+    height: auto;
+   line-height: normal;
+   font-size: 0.8rem;
   }
 }
 
@@ -252,7 +282,7 @@ body {
   ===========================================================*/
 
 #cta.section {
-  padding: 90px 0px;
+  padding: 2rem 0px;
 }
 
 .cta-content .cta-heading {
@@ -262,6 +292,7 @@ body {
 
 .cta-content p.lead {
   color: #fff;
+  font-size: 1rem;
 }
 
 /*=========================================================
@@ -324,7 +355,7 @@ body {
   ===========================================================*/
 
 .causes {
-  margin-bottom: 60px;
+  margin-bottom: 1rem;
 }
 
 .causes .causes-img {
@@ -413,6 +444,7 @@ body {
 
 .causes .causes-content p {
   color: #607d8b;
+  margin: 0;
 }
 .causes .causes-content h3 {
   text-transform: capitalize;
@@ -439,6 +471,128 @@ body {
   float: right;
   margin-top: 30px;
 }
+
+/*=========================================================
+      ACTIVITIES
+  ===========================================================*/
+.activities{
+  background-color: #f4f4f8;
+}
+  
+  
+  .activity .activity-img {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .activity .activity-img a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--button-color);
+    opacity: 0;
+    -webkit-transition: 0.3s opacity;
+    transition: 0.3s opacity;
+  }
+  
+  .activity .activity-img a:hover:after {
+    opacity: 0.6;
+  }
+  
+  .activity .activity-img img {
+    width: 100%;
+  }
+  
+  .activity .activity-progress {
+    margin-top: 45px;
+  }
+  
+  .activity-progress .activity-progress-bar {
+    position: relative;
+    height: 6px;
+    background-color: #e6e6ea;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .activity-progress .activity-progress-bar > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--button-color);
+    bottom: 0;
+    border-radius: 10px;
+  }
+  
+  .activity-progress .activity-progress-bar > div span {
+    position: absolute;
+    right: 5px;
+    top: -3px;
+    -webkit-transform: translate(50%, -100%);
+    -ms-transform: translate(50%, -100%);
+    transform: translate(50%, -100%);
+    padding: 2px 10px;
+    background: var(--button-color);
+    color: #fff;
+    font-weight: 400;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+  
+  .activity-progress .activity-progress-bar > div span:after {
+    content: "";
+    position: absolute;
+    background-color: var(--button-color);
+    height: 3px;
+    bottom: 0;
+    -webkit-transform: translate(-50%, 100%);
+    -ms-transform: translate(-50%, 100%);
+    transform: translate(-50%, 100%);
+    width: 3px;
+    left: 50%;
+  }
+  
+  .activity-progress .activity-goal {
+    float: right;
+  }
+  
+  .activity .activity-content {
+    margin-top: 5px;
+  }
+  
+  .activity .activity-content p {
+    color: #607d8b;
+  }
+  .activity .activity-content h3 {
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+  
+  .activity .activity-content h3 > a {
+    font-weight: 700;
+    color: #23262a;
+    text-decoration: none;
+  }
+  
+  .activity .activity-content .activity-donate {
+    margin-top: 15px;
+  }
+  
+  .activity-details .activity-progress {
+    width: 75%;
+    float: left;
+    margin-top: 45px;
+  }
+  
+  .activity-details .activity-donate {
+    float: right;
+    margin-top: 30px;
+  }
+  
 
 /*=========================================================
       EVENTS
@@ -1068,16 +1222,19 @@ body {
 
 @media only screen and (max-width: 991px) {
   .section-title .title {
-    font-size: 33px;
+    font-size: 1.5rem;
   }
   .home-content h1 {
-    font-size: 43px;
+    font-size: 1.5rem;
   }
   .welcome-video {
     margin-top: 30px;
   }
-  .cta-content h1 {
-    font-size: 43px;
+  .cta-content .cta-heading {
+    font-size: 1.5rem;
+  }
+  .cta-content .lead {
+    font-size: 0.8rem;
   }
   #footer-bottom .footer-nav {
     text-align: left;
