@@ -345,15 +345,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.causes-donate {
-  background-color: #eee;
-  color: var(--button-color);
-}
-
-.causes-donate:hover {
-  background-color: var(--button-color);
-}
-
 .causes .causes-img {
   position: relative;
   border-radius: 10px;
@@ -436,11 +427,13 @@ body {
 .causes .causes-content p {
   margin: 0;
   line-height: normal;
+  color: #8f8f8f;
+  font-size: 0.9rem;
 }
 
 .causes .causes-content h3 {
   text-transform: capitalize;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .causes .causes-content h3 > a {
@@ -453,6 +446,10 @@ body {
 
 .causes .causes-content .causes-donate {
   margin-top: 15px;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  height: auto;
+  line-height: normal;
 }
 
 .causes-details .causes-progress {
