@@ -22,6 +22,11 @@
   padding-right: 54px;
   font-size: 1.2rem;
 }
+@media only screen and (max-width: 767px) {
+  .navbar {
+    font-size: 1rem;
+  }
+}
 
 body {
   font-family: "Signika Negative", sans-serif;
@@ -238,7 +243,7 @@ body {
   padding: 30px;
   margin-bottom: 30px;
   border-radius: 10px;
-  border: 1px solid #e6e6ea;
+  border: 1px solid var(--button-color);
   transition: 0.3s border-color;
   line-height: normal;
 }
@@ -340,6 +345,15 @@ body {
   margin-bottom: 1rem;
 }
 
+.causes-donate {
+  background-color: #eee;
+  color: var(--button-color);
+}
+
+.causes-donate:hover {
+  background-color: var(--button-color);
+}
+
 .causes .causes-img {
   position: relative;
   border-radius: 10px;
@@ -420,18 +434,20 @@ body {
 }
 
 .causes .causes-content p {
-  color: #607d8b;
   margin: 0;
+  line-height: normal;
 }
 
 .causes .causes-content h3 {
   text-transform: capitalize;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .causes .causes-content h3 > a {
   font-weight: 700;
-  color: #23262a;
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: var(--button-color);
   text-decoration: none;
 }
 
