@@ -1,6 +1,6 @@
 :root {
   --brand-color: #ff6d7a;
-  --button-color: #83ba09;
+  --button-color: #018d37;
   --dark-color: #164e63;
   --logo-color: #ca0517;
   --mid-color: #e5e7eb;
@@ -13,14 +13,6 @@
 
 .navbar {
   font-weight: bold;
-}
-.navbar .navbar-brand {
-  font-family: "Times New Roman", cursive;
-  font-style: italic;
-  color: var(--logo-color);
-  background: url(../img/logo.jpg) no-repeat 100% 100%/contain;
-  padding-right: 54px;
-  font-size: 1.2rem;
 }
 @media only screen and (max-width: 767px) {
   .navbar {
@@ -41,17 +33,17 @@ body {
   height: 350px;
 }
 .banner .bannerItem.banner1 {
-  background: #f4f4f8 url("../img/background-1.jpg") 50% 30%/cover no-repeat;
+  background: #f4f4f8 url("../img/bg1.jpg") 50% 30%/cover no-repeat;
 }
 .banner .bannerItem.banner2 {
-  background: #f4f4f8 url("../img/background-2.jpg") 50% 30%/cover no-repeat;
+  background: #f4f4f8 url("../img/bg4.jpg") 50% 30%/cover no-repeat;
 }
 .banner .bannerItem.banner3 {
-  background: #f4f4f8 url("../img/background-3.jpg") 50% 30%/cover no-repeat;
+  background: #f4f4f8 url("../img/bg2.jpg") 50% 30%/cover no-repeat;
 }
 .banner .bannerContent {
   position: relative;
-  color: var(--light-color);
+  color: black;
   display: flex;
   align-items: center;
   height: 100%;
@@ -64,7 +56,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
 }
 .banner .bannerSubHeading {
   font-size: 1.2rem;

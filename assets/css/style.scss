@@ -1,7 +1,7 @@
 :root {
   --brand-color: #ff6d7a;
   // --brand-color: #FDA4AF;
-  --button-color: #83ba09;
+  --button-color: #018d37;
   --dark-color: #164e63;
   --logo-color: #ca0517;
   --mid-color: #e5e7eb;
@@ -12,13 +12,13 @@
 }
 .navbar {
   .navbar-brand {
-    // font-family: "Twinkle Star", cursive;
-    font-family: "Times New Roman", cursive;
-    font-style: italic;
-    color: var(--logo-color);
-    background: url(../img/logo.jpg) no-repeat 100% 100%/contain;
-    padding-right: 54px;
-    font-size: 1.2rem;
+    // // font-family: "Twinkle Star", cursive;
+    // font-family: "Times New Roman", cursive;
+    // font-style: italic;
+    // color: var(--logo-color);
+    // background: url(../img/logo.jpg) no-repeat 100% 100%/contain;
+    // padding-right: 54px;
+    // font-size: 1.2rem;
   }
   font-weight: bold;
   @media only screen and (max-width: 767px) {
@@ -36,15 +36,15 @@ body {
     height: 350px;
 
     &.banner1 {
-      background: #f4f4f8 url("../img/background-1.jpg") 50% 30% /
+      background: #f4f4f8 url("../img/bg1.jpg") 50% 30% /
         cover no-repeat;
     }
     &.banner2 {
-      background: #f4f4f8 url("../img/background-2.jpg") 50% 30% /
+      background: #f4f4f8 url("../img/bg4.jpg") 50% 30% /
         cover no-repeat;
     }
     &.banner3 {
-      background: #f4f4f8 url("../img/background-3.jpg") 50% 30% /
+      background: #f4f4f8 url("../img/bg2.jpg") 50% 30% /
         cover no-repeat;
     }
   }
@@ -57,9 +57,8 @@ body {
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5);
     }
-    color: var(--light-color);
+    color: black;
     display: flex;
     align-items: center;
     height: 100%;
