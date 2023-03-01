@@ -141,8 +141,6 @@ body {
   background: var(--button-color);
   color: #fff;
   font-weight: 400;
-  height: 45px;
-  line-height: 45px;
   border: none;
   border-radius: 25px;
   overflow: hidden;
@@ -1210,7 +1208,7 @@ body {
     float: none;
   }
   .article-tags-share .tags,
-.article-tags-share .share {
+  .article-tags-share .share {
     display: block;
     float: none;
     width: 100%;

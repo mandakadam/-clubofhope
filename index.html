@@ -649,9 +649,32 @@
                 sweet heaven to live in.
               </p>
 
-              <a href="#" class="primary-button seconday-button"
+              <!-- <a href="#" class="primary-button seconday-button"
                 >Join Us Now!</a
-              >
+              > -->
+              <div class="card">
+                <div class="card-body">
+                  
+            <form 
+            class="row justify-content-md-center"
+            id="contactus-form"
+            method="POST" 
+            action="https://script.google.com/macros/s/AKfycbzW9ubb9BaqVYJ9dDRQDb6VpbB8_rnqgwxFkNYp1NfLlwK2trq9BtEoIYr8NFJeLYMY/exec"
+          >
+          <div class="col-md-auto mb-2">
+            <input class="form-control" name="Email" type="email" placeholder="Email" required>
+          </div>
+          <div class="col-md-auto mb-2">
+            <input class="form-control" name="Name" type="text" placeholder="Name" required>
+          </div>
+          <div class="col-md-auto mb-2">
+            <button class="primary-button seconday-button" type="submit" style="padding:7px 15px; border-radius: 5px;"><span id="loading" class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" style="display:none"></span> Send</button>
+            </div>
+
+          </form>
+            
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -713,6 +736,29 @@
        
    
       })();
+
+
+      window.addEventListener("load", function() {
+        const form = document.getElementById('contactus-form');
+        form.addEventListener("submit", function(e) {
+          e.preventDefault();
+          document.getElementById('loading').style.display = "inline-block";
+
+          const data = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+            method: 'POST',
+            body: data,
+          })
+          .then(() => {
+            alert("Success!");
+            document.getElementById('loading').style.display = "none";
+            form.reset();  
+          })
+        });
+      });
+
+
     </script>
   </body>
 </html>
